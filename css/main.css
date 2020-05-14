@@ -107,7 +107,7 @@ button, button:hover, button:focus, button:active
                         /*First disp*/
 
 .header{
-	background: url('../img/first-bg.jpg') no-repeat center top;
+	background: url('../img/first-bg.jpg') no-repeat center top/cover;
 	padding-top: 30px;
 	padding-bottom: 255px;
 }
@@ -118,7 +118,7 @@ button, button:hover, button:focus, button:active
 	text-transform: uppercase;
 }
 .menu{
-	margin-top: 14px;
+	margin-top: 15px;
 }
 .logo span{
 	font-weight: 300;
@@ -127,6 +127,7 @@ button, button:hover, button:focus, button:active
 .menu__item{
 	font-size: 14px;
 	text-transform: uppercase;
+	margin-left: 30px;
 	
 }
 
@@ -135,54 +136,45 @@ button, button:hover, button:focus, button:active
 	margin-left: -20px;
 
 }
+
 .menu__item a:after {
-	margin-top: 45px;
-display: block;
-content: ""; 
-height: 3px; 
-width: 0%; 
-background-color: #a09ea0;
-transition: width 0.4s ease-in-out; 
-transform: translate(-25px);
+	position: absolute;
+    display: block;
+    content: '';
+    bottom: -30px;
+    background-color: rgba(255, 255, 255, 0.502);
+    height: 3px;
+    width: 0;
+
+    transform: translateX(-50%);
+    transition: all 0.2s linear;
 }
+
 .menu__item a:hover:after,
 .menu__item a:focus:after {
-width: 200%;
+width: 15%;
 }
 
 .menu__item-short a:after {
-margin-top: 45px;
-display: block;
-content: ""; 
-height: 3px;
-width: 0%; 
-background-color: #a09ea0; 
-transition: width 0.4s ease-in-out;
-transform: translate(-25px);
+	position: absolute;
+    display: block;
+    content: '';
+    bottom: -30px;
+    background-color: rgba(255, 255, 255, 0.502);
+    height: 3px;
+    width: 0;
+    left: 90%;
+    transform: translateX(-50%);
+    transition: all 0.2s linear;
 }
 
 .menu__item-short a:hover::after,
 .menu__item-short a:focus::after {
-	width: 150%;
-}
-.menu__item-long a:after {
-margin-top: 45px;
-display: block;
-content: ""; 
-height: 3px;
-width: 0%; 
-background-color: #a09ea0; 
-transition: width 0.4s ease-in-out;
-transform: translate(-25px);
-}
-
-.menu__item-long a:hover::after,
-.menu__item-long a:focus::after {
-	width: 350%;
+	width: 15%;
 }
 
 .offer{
-	margin-top: 160px;
+	margin-top: 167px;
 }
 .offer__title{
 
@@ -206,10 +198,11 @@ transform: translate(-25px);
 	border-bottom: 1px solid #51525b;
 	margin: 0;
 	padding: 0;
+	padding-bottom: 30px;
 
 }
 .advantages{
-	padding: 122px 0 50px;
+	padding: 123px 0 50px;
 }
 .advantage{
 	text-align: center;
@@ -224,7 +217,7 @@ transform: translate(-25px);
 }
 
 .projects{
-	padding-bottom: 130px; 
+	padding-bottom: 106px; 
 }
 .projects__pictures{
 	margin-bottom: 25px;
@@ -277,7 +270,7 @@ transform: translate(-25px);
 }
 .team{
 	background-color: #f1f2fd;
-	padding: 99px 0 88px;
+	padding: 125px 0 88px;
 }
 .team__name{
 	font-size:22px;
@@ -297,13 +290,13 @@ transform: translate(-25px);
 	margin-bottom: 27px;
 }
 
-.social__facebook{
+.social__item-facebook{
 	background-image: url(../img/facebook.png);
 }
-.social__twitter{
+.social__item-twitter{
 	background-image: url(../img/twitter.png);
 }
-.social__in{
+.social__item-in{
 	background-image: url(../img/in.png);
 }
 .social-item {
@@ -319,10 +312,10 @@ transform: translate(-25px);
 }
 .social-item:hover{
 	background-color: #f1f2fd;
-	border-radius: 1px solid #f1f2fd;
+	border: 1px solid #f1f2fd;
 }
 .workshop{
-	background: url(../img/lady.jpg) no-repeat right center;
+	background: url(../img/lady.jpg) no-repeat right center/cover;
 	height: 500px;
 
 }
@@ -333,6 +326,7 @@ transform: translate(-25px);
     color: #fff;
     padding-left: 72px;
     height: 500px;
+    padding-right: 16px;
 
 }
 .true__title{
@@ -367,7 +361,7 @@ transform: translate(-25px);
 	margin-bottom: 49px;
 }
 .content__btn{
-	width: 280px;
+	max-width: 280px;
 	color: #fff;
 	background-color: #e84545;
 	padding: 13px 83px;
@@ -436,10 +430,12 @@ transform: translate(-25px);
 	.offer__text{
 		margin-left: 77px;
 	}
-	
+	.header{
+		padding-bottom: 170px;
+	}
 
 	.advantages{
-		padding-top: 0;
+		padding-top: 85;
 	}
 	.social__list{
 		-ms-align-items: center;
@@ -464,10 +460,10 @@ transform: translate(-25px);
 		margin: 0 auto;
 	}
 	.projects__pictures{
-		margin: 0 auto 20px auto;
+		margin: 0 auto 40px auto;
 	}
 	
-    .social__list{
+    .social{
 		-ms-align-items: center;
 		align-items: center;
 		justify-content: center;
@@ -479,13 +475,26 @@ transform: translate(-25px);
 	.offer__text{
 		margin-left: 5px;
 	}
-	
+	.footer{
+		padding: 40px 0;
+	}
+	.true{
+		padding-top: 86px;
+		height: 435px;
+	}
+	.advantage{
+		margin-bottom: 50px;
+	}
 	.team__wrapper{
-		margin-bottom: 85px;
+		margin-bottom: 110px;
 	}
-	.projects__pictures{
-		margin: 0px auto 20px auto;
+	.team{
+		padding: 77px 0 0 0;
 	}
+	.projects{
+		padding-bottom: 80px;
+	}
+
 
 
 	
@@ -509,52 +518,10 @@ transform: translate(-25px);
 	.menu__item a{
 		margin-left: 0;
 	}
-	.menu__item a:after {
-	margin-top: 5px;
-display: block;
-content: ""; 
-height: 3px; 
-width: 0%; 
-background-color: #a09ea0;
-transition: width 0.4s ease-in-out; 
-transform: translate(-25px);
-}
-.menu__item a:hover:after,
-.menu__item a:focus:after {
-width: 180%;
-}
-
-.menu__item-short a:after {
-margin-top: 5px;
-display: block;
-content: ""; 
-height: 3px;
-width: 0%; 
-background-color: #a09ea0; 
-transition: width 0.4s ease-in-out;
-transform: translate(-25px);
-}
-
-.menu__item-short a:hover::after,
-.menu__item-short a:focus::after {
-	width: 180%;
-}
-.menu__item-long a:after {
-margin-top: 5px;
-display: block;
-content: ""; 
-height: 3px;
-width: 0%; 
-background-color: #a09ea0; 
-transition: width 0.4s ease-in-out;
-transform: translate(-25px);
-}
-
-.menu__item-long a:hover::after,
-.menu__item-long a:focus::after {
-	width: 250%;
-}
-
+	.menu__item {
+     margin-left: 30px;
+	}
+	
 .navigation{
 	border:none;
 }
@@ -571,7 +538,7 @@ transform: translate(-25px);
 .advantage__text{
 	margin:0 auto;
 }
-.social__list{
+.social{
 	margin-left: 0;
 	justify-content: center;
 }
@@ -582,4 +549,20 @@ transform: translate(-25px);
 .offer__title{
 	font-size: 35px;
 }
+.workshop{
+	height: 300px;
+}
+.true{
+	height: 475px;
+}
+.menu__item a:hover:after,
+.menu__item a:focus:after {
+width: 0;
+}
+.menu__item-short a:hover::after,
+.menu__item-short a:focus::after {
+	width: 0;
+}
+
+
 }
